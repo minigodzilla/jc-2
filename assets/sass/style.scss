@@ -15,7 +15,9 @@ html {
 }
 
 body {
-	font-family: 'Maison Neue',sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat',sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.75;
@@ -35,15 +37,14 @@ body {
 	}
 
 	@include media-breakpoint-up(xl) {
-		font-size: 14px;
-	}
-
-	@include media-breakpoint-up(xxl) {
 		font-size: 16px;
 	}
 }
 
-a {
+a,
+a:hover,
+a:focus,
+a:visited {
 	color: inherit;
 }
 
@@ -58,9 +59,17 @@ h6 {
 	margin-bottom: 1rem;
 }
 
-.jc-img ,
+.svg-defs {
+	display: none;
+}
+
+.jc-img {
+	width: 100%;
+}
+
 .jc-svg {
 	width: 100%;
+	fill: #fff;
 }
 
 .form-control {
@@ -124,5 +133,31 @@ h6 {
 	}
 }
 
+main .jc-heading {
+	font-family: 'Braga';
+	font-size: 4em;
+	font-weight: 400;
+	line-height: 1.15;
+	text-align: center;
+}
 
+main .jc-copy {
+	font-size: 1.5em;
+	font-weight: 300;
+	text-align: center;
+}
 
+main .jc-btn {
+	font-family: 'Braga';
+	font-size: 2.5em;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: underline;
+	margin: 0 auto;
+	display: block;
+}
+
+.jc-coming-soon {
+	background-image: url('../img/coming-soon.jpg');
+
+}
