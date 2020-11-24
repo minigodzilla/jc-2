@@ -162,7 +162,6 @@ h6 {
 // sections
 
 .jc-hero {
-	margin-top: 5em;
 	margin-bottom: 5em;
 
 	.jc-eyebrow {
@@ -194,8 +193,10 @@ h6 {
 		margin-bottom: 0.5em;
 	}
 
-	.jc-img {
+	.jc-video {
 		margin-bottom: 3em;
+		border: 0.625em solid black;
+		outline: 0.1em solid #666;
 	}
 
 	.jc-copy {
@@ -205,7 +206,7 @@ h6 {
 
 .jc-coming-soon {
 	margin-bottom: 2em;
-	background-image: url('../img/coming-soon.jpg');
+	//background-image: url('../img/coming-soon.jpg');
 	background-position: 50% 0;
 	background-size: cover;
 
