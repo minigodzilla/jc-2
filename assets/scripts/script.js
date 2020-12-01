@@ -60,21 +60,28 @@ $(function()
 $(function()
 {
 
-	$('.oj-form-toggle-option').on('click', function() {
+	$('.jc-form-toggle-option').on('click', function() {
 
 		var value = $(this).attr('data-value');
 
-		$('.oj-form-toggle-input').attr('value', value);
+		$('.jc-form-toggle-input').attr('value', value);
 
-	})
+	});
+
+
+	$('.jc-form-check-span').on('click', function() {
+
+		$('input#Custom1').trigger('click');
+
+	});
 
 
 	////////////////////////////////////////////////////////////////////////////////
 
-	var $form              = $('#oj-register-form');
+	var $form              = $('#jc-register-form');
 	var $inputs            = $form.find ('.form-control');
 	var $email             = $form.find ('.form-control[name=Email]');
-	var $button            = $form.find ('.oj-btn-submit');
+	var $button            = $form.find ('.jc-btn-submit');
 	var errorState         = false;
 
 	////////////////////////////////////////////////////////////////////////////////
@@ -162,13 +169,13 @@ $(function()
 
 		// now we do ajax
 		// get form
-		var form = $('#oj-register-form')[0];
+		var form = $('#jc-register-form')[0];
 
 		// create an FormData object 
 		var data = new FormData(form);
 
 		// prevent duplicate submissions
-		$form.find('.oj-btn-submit').prop('disabled', true);
+		$form.find('.jc-btn-submit').prop('disabled', true);
 
 		// do a barrel roll
 		$.ajax({
@@ -182,14 +189,14 @@ $(function()
 			timeout: 800000,
 			success: function (data) {
 
-				$form.addClass('oj-success');
+				$form.addClass('jc-success');
 
 			},
 			error: function (e) {
 
 				console.log("ERROR : ", e);
 
-				$form.addClass('oj-error');
+				$form.addClass('jc-error');
 
 			}
 		});

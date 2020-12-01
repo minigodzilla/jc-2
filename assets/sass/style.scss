@@ -256,17 +256,26 @@ h6 {
 
 	.jc-form-col {
 
+		.jc-subheading,
 		.jc-heading {
+			font-family: montserrat,sans-serif;
 			text-align: center;
-			margin-bottom: 0.5em;
+			margin-bottom: 0.25em;
+			font-size: 2em;
+			letter-spacing: 10px;
+			font-weight: 300;
 
-			@include media-breakpoint-down(sm) {
-				font-size: 3em;
-			}
+			// @include media-breakpoint-down(sm) {
+			// 	font-size: 3em;
+			// }
 
 			@include media-breakpoint-up(md) {
-				font-size: 4em;
+
 			}
+		}
+
+		.jc-heading {
+			margin-bottom: 2em;
 		}
 
 		#jc-register-form {
@@ -339,31 +348,34 @@ h6 {
 		}
 
 		.jc-form-toggle {
-			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
 			.jc-form-toggle-label {
-				font-family: 'Bebas Neue',sans-serif;
+				font-family: Braga,serif;
 				font-weight: 400;
 				line-height: 1.325;
 				text-align: center;
+				margin-right: 1em;
 
 				@include media-breakpoint-down(sm) {
 					font-size: 2em;
 				}
 
 				@include media-breakpoint-up(md) {
-					font-size: 2.5em;
+					font-size: 3em;
 				}
 			}
 
 			.jc-form-toggle-option {
 				display: inline-block;
 				margin: 0 0.1em;
-				font-family: 'Bebas Neue',sans-serif;
+				font-family: Braga,serif;
 				font-weight: 400;
 				line-height: 1.325;
 				text-align: center;
-				color: #D5D5D5;
+				color: #666;
 				transition: color ease 200ms;
 				cursor: pointer;
 
@@ -378,65 +390,49 @@ h6 {
 
 			.jc-form-toggle-input[value='true'] ~ .jc-yes,
 			.jc-form-toggle-input[value='false'] ~ .jc-no {
-				color: #FA213E;
+				color: #fff;
 			}
 		}
 
 		.form-check {
-			position: relative;
-
-			@include media-breakpoint-down(sm) {
-				margin: 1em 1em;
-			}
-
-			@include media-breakpoint-up(md) {
-				margin: 2em 5.9em;
-			}
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
 			.form-check-input {
-				appearance: none;
-				position: absolute;
-				border: 1px solid #D5D5D5;
-				outline: none;
+				display: none;
+			}
+
+			.jc-form-check-span {
+				line-height: 1.4;
+				font-family: Braga,serif;
+				color: #666;
+				transition: color 200ms ease;
 
 				@include media-breakpoint-down(sm) {
-					width: 2em;
-					height: 2em;
+					font-size: 0.9em;
 				}
 
 				@include media-breakpoint-up(md) {
-					width: 2.5em;
-					height: 2.5em;
+					font-size: 4em;
 				}
+			}
 
-				&:focus {
-					border-color: #000;
-				}
-
-				&:checked::before {
-					content: '';
-					position: absolute;
-					width: 30%;
-					height: 50%;
-					transform: translate(-50%,-65%) rotate(45deg);
-					border: solid #FA213E;
-					border-width: 0 0.2em 0.2em 0;
-					left: 50%;
-					top: 50%;
-				}
+			input:checked + .jc-form-check-span {
+				color: #fff;
 			}
 
 			.form-check-label {
 				line-height: 1.4;
+				font-family: Braga,serif;
+				margin: 0 1em 0 0;
 
 				@include media-breakpoint-down(sm) {
 					font-size: 0.9em;
-					margin: 0.125em 0 0 1.75em;
 				}
 
 				@include media-breakpoint-up(md) {
-					font-size: 1.1em;
-					margin: 0 0 0 2.25em;
+					font-size: 2.5em;
 				}
 			}
 		}
@@ -524,7 +520,17 @@ footer {
 		}
 	}
 	.jc-logo-col {
-		display: flex;
-		align-items: flex-start;
+		text-align: right;
+
+		.jc-svg {
+			width: auto;
+			height: 1.25em;
+		}
+
+		.jc-svg:nth-child(1) {  }
+		.jc-svg:nth-child(2) { margin-left: 2em; }
+		.jc-svg:nth-child(3) { margin-left: 2em; }
+		.jc-svg:nth-child(4) { margin-left: 1em; }
+		.jc-svg:nth-child(5) { margin-left: 1em; }
 	}
 }
