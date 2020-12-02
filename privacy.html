@@ -80,163 +80,30 @@
 	</svg>
 
 	<main>
-		<section class="jc-hero">
+		<section class="jc-gallery">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<!-- <img class="jc-img" src="assets/img/hero.jpg"/> -->
-						<video class="jc-video d-block w-100" preload="auto" loop="true" playsinline="true" autoplay="true" muted="true" type="video/mp4" src="assets/video/hero.mp4"></video>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="jc-welcome">
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-md-11 mx-auto">
+						<svg class="d-block mx-auto jc-svg" viewBox="0 0 220 50">
+							<use xlink:href="#jc-logo-jcm" />
+						</svg>
 						<h1 class="jc-heading">
-							WELCOME TO A PLACE EMBRACED BY LUXURY, PRESTIGE AND THE NATURAL HERITAGE LANDSCAPE OF JOSHUA CREEK.
+							GALLERY
 						</h1>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-12 col-md-5 mx-auto">
-						<video class="jc-video d-block w-100" preload="auto" loop="true" playsinline="true" autoplay="true" muted="true" type="video/mp4" src="assets/video/creek.mp4"></video>
+					<div class="col-12">
+						<img class="w-100 jc-img" src="assets/img/gallery-1.jpg">
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-12 col-md-11 mx-auto">
-						<p class="jc-copy">Established in the late 1990s as an affluent enclave of upscale homes, Joshua Creek is Oakville’s most desirable ravine community coveted for its modern village lifestyle and proximity to Toronto. With impressive local pride of ownership, picturesque vistas, and access to top ranked schools, Joshua Creek Montage presents one of the last remaining opportunities to call this neighbourhood home.</p>
-						<a class="jc-btn" href="#register">REGISTER YOUR INTEREST</a>
+					<div class="col-12 col-md-6">
+						<div class="jc-gallery-title">JOSHUA CREEK ARTIST'S CONCEPT</p>
+						<!-- <div class="jc-btn">PREVIOUS</div> -->
+						<!-- <div class="jc-btn">NEXT</div> -->
 					</div>
 				</div>
-			</div>
-		</section>
-		<section class="jc-coming-soon">
-			<a href="#register">
-				<video class="jc-video d-block w-100" preload="auto" loop="true" playsinline="true" autoplay="true" muted="true" type="video/mp4" src="assets/video/forest.mp4"></video>
-			</a>
-		</section>
-		<section class="jc-map">
-			<div class="container">
-				<img class="jc-img" src="assets/img/map.jpg"/>
-			</div>
-		</section>
-		<section class="jc-register" id="register">
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-md-11 mx-auto jc-form-col">
-						<h2 class="jc-subheading">ARRIVING EARLY 2021</h2>
-						<h1 class="jc-heading">REGISTER</h1>
-						<form id="jc-register-form" action="register.php" method="post">
-							<div class="jc-form-container">
-								<input type="hidden" id="cid" name="cid" value="22864" />
-								<input type="hidden" id="Origin" name="Origin" value="Microsite Registration" />
-								<div class="row jc-form-fields">
-									<div class="col-12">
-										<div class="form-group">
-											<input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="First Name">
-											<small id="v-error-FirstName" class="invalid-feedback form-text text-danger">Please enter your first name.</small>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="form-group">
-											<input type="text" class="form-control" id="LastName" name="LastName" placeholder="Last Name">
-											<small id="v-error-LastName" class="invalid-feedback form-text text-danger">Please enter your last name.</small>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="form-group">
-											<input type="text" class="form-control" id="Email" name="Email" placeholder="Email">
-											<small id="v-error-Email" class="invalid-feedback form-text text-danger">Please enter your email address.</small>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="form-group">
-											<input type="text" class="form-control" id="PostalCode" name="PostalCode" placeholder="Postal Code">
-											<small id="v-error-PostalCode" class="invalid-feedback form-text text-danger">Please enter your Postal Code.</small>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="form-group">
-											<input type="text" class="form-control" id="Custom2" name="Custom2" placeholder="How did you hear about us?">
-											<small id="v-error-Custom2" class="invalid-feedback form-text text-danger">Please tell us how you heard about us.</small>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="jc-form-toggle">
-											<input class="jc-form-toggle-input" type="hidden" value="true" id="isBroker" name="isBroker">
-											<div class="jc-form-toggle-label">Are you a Realtor?</div>
-											<div class="jc-form-toggle-option jc-no" data-value="false">No</div>
-											<div class="jc-form-toggle-option jc-yes" data-value="true">Yes</div>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="form-check">
-											<label class="form-check-label" for="Custom1">Do you agree to the <a href="toc.html">terms and conditions</a>?</label>
-											<input class="form-check-input" type="checkbox" value="" id="Custom1" name="Custom1">
-											<span class="jc-form-check-span">Yes</span>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="form-group">
-											<button type="submit" class="btn jc-btn jc-btn-submit">SUBMIT</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="jc-form-error-container">
-								<p class="jc-copy">An error occured.<br/>Please try again later.</p>
-							</div>
-							<div class="jc-form-success-container">
-								<p class="jc-copy">Thank you<br/>for your registration!</p>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="jc-artist-conception">
-			<img class="jc-img" src="assets/img/artist-concept.jpg"/>
-		</section>
-		<section class="jc-visionaries">
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-md-11 mx-auto">
-						<h1 class="jc-heading">
-							THE VISIONARIES
-						</h1>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-12 col-lg-4 jc-visionary-col">
-						<svg class="jc-svg jc-logo-hallett" viewBox="0 0 286 60">
-							<use xlink:href="#jc-logo-hallett" />
-						</svg>
-						<p class="jc-copy">Hallett Homes takes a hands-on approach to building great properties. We set a high standard for quality craftsmanship, from groundbreaking design to offering custom finishes at competitive prices.</p>
-						<a class="jc-btn" href="#">VISIT WEBSITE</a>
-					</div>
-					<div class="col-12 col-lg-4 jc-visionary-col">
-						<svg class="jc-svg jc-logo-primont" viewBox="0 0 157 80">
-							<use xlink:href="#jc-logo-primont" />
-						</svg>
-						<p class="jc-copy">For over 50 years, Primont has followed the simple philosophy of building every home as if it were their own and treating every customer as if they were a member of the family. </p>
-						<a class="jc-btn" href="#">VISIT WEBSITE</a>
-					</div>
-					<div class="col-12 col-lg-4 jc-visionary-col">
-						<svg class="jc-svg jc-logo-valery" viewBox="0 0 253 55">
-							<use xlink:href="#jc-logo-valery" />
-						</svg>
-						<p class="jc-copy">Valery Homes has been building on a tradition of excellence for over 60 years.  Personalized service, pride in craftsmanship and superior design are the hallmarks of our heritage.</p>
-						<a class="jc-btn" href="#">VISIT WEBSITE</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="jc-bottom-links">
-			<div class="container d-flex">
-				<!-- <a class="jc-btn" href="#">BROKER PORTAL</a> -->
-				<a class="jc-btn" href="gallery.html">GALLERY</a>
 			</div>
 		</section>
 	</main>
@@ -249,7 +116,7 @@
 						<use xlink:href="#jc-logo-jcm" />
 					</svg>
 				</div>
-				<div class="col-5">&copy; 2020 Primont Homes, Hallett Homes and Valery Homes. All rights reserved. <a href="terms.html" target="_blank">Terms of Use</a>. <a href="privacy.html" target="_blank">Privacy Policy</a>. A JoeyAi Creation. Illustration is artist’s concept. Prices and specifications are subject to change without notice. E.&amp;O.E</div>
+				<div class="col-5">&copy; 2020 Primont Homes, Hallett Homes and Valery Homes. <a href="terms.html" target="_blank">Terms of Use</a>. <a href="privacy.html" target="_blank">Privacy Policy</a>. Privacy Policy. A JoeyAi Creation. Illustration is artist’s concept. Prices and specifications are subject to change without notice. E.&amp;O.E</div>
 				<div class="col-4 jc-logo-col">
 					<svg class="jc-svg" viewBox="0 0 286 60">
 						<use xlink:href="#jc-logo-hallett" />
