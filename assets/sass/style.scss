@@ -527,11 +527,11 @@ footer {
 			height: 1.125em;
 		}
 
-		.jc-svg:nth-child(1) {  }
-		.jc-svg:nth-child(2) { margin-left: 2em; }
-		.jc-svg:nth-child(3) { margin-left: 2em; }
-		.jc-svg:nth-child(4) { margin-left: 1em; }
-		.jc-svg:nth-child(5) { margin-left: 1em; }
+		a:nth-child(1) .jc-svg {  }
+		a:nth-child(2) .jc-svg { margin-left: 2em; }
+		a:nth-child(3) .jc-svg { margin-left: 2em; }
+		a:nth-child(4) .jc-svg { margin-left: 1em; }
+		a:nth-child(5) .jc-svg { margin-left: 1em; }
 	}
 }
 
