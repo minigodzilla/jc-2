@@ -60,6 +60,15 @@ $(function()
 $(function()
 {
 
+	$('.jc-select').on('change',function() {
+
+		var value = $(this).val();
+
+		console.log(value);
+
+		$('.jc-select-choice').html(value);
+	});
+
 	$('.jc-form-toggle-option').on('click', function() {
 
 		var value = $(this).attr('data-value');

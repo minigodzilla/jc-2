@@ -83,6 +83,35 @@ h6 {
 	}
 }
 
+.jc-select-choice {
+	text-align: center;
+	font-family: Braga,serif;
+	font-size: 4em;
+	font-weight: 400;
+	line-height: 1.15;
+}
+
+.jc-select {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	opacity: 0;
+
+	* {
+		font-size: 16px;
+	}
+
+	option {
+		font-size: 16px;
+		text-align: center;
+	}
+
+	option:disabled {
+		color: #666;
+	}
+}
+
 .form-check {
 	position: relative;
 
