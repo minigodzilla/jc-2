@@ -7,7 +7,6 @@ include "lib/mail/phpmailer.class.php";
 include "lib/email.class.php";
 
 
-
 $data = $_POST;
 $data["IPAddress"] = $_SERVER["REMOTE_ADDR"];
 $data["SourceIP"] = $_SERVER['SERVER_ADDR'] ? $_SERVER['SERVER_ADDR'] : $_SERVER['LOCAL_ADDR'];
