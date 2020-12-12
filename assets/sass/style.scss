@@ -8,7 +8,7 @@
 @import "_fonts.scss";
 
 //
-// global style rules incl. form controls and buttons
+// global style rules incl. form controls, buttons, vimeo embed
 
 html {
 	scroll-behavior: smooth;
@@ -18,15 +18,11 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat',sans-serif;
-	font-size: 16px;
+	font-size: 10px;
 	font-weight: 300;
 	line-height: 1.75;
 	color: #fff;
 	background-color: #000;
-
-	@include media-breakpoint-up(sm) {
-		font-size: 16px;
-	}
 
 	@include media-breakpoint-up(md) {
 		font-size: 8.75px;
@@ -72,6 +68,11 @@ h6 {
 	fill: #fff;
 }
 
+.form-group,
+.jc-form-toggle {
+	margin-bottom: 1em;
+}
+
 .form-control {
 	border-color: #000;
 	border-radius: 0;
@@ -86,30 +87,25 @@ h6 {
 .jc-select-choice {
 	text-align: center;
 	font-family: Braga,serif;
-	font-size: 4em;
 	font-weight: 400;
 	line-height: 1.15;
+
+	@include media-breakpoint-down(sm) {
+		font-size: 3em;
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: 4em;
+	}
 }
 
 .jc-select {
 	position: absolute;
-	width: 100%;
 	top: 0;
+	right: 0;
 	bottom: 0;
+	left: 0;
 	opacity: 0;
-
-	* {
-		font-size: 16px;
-	}
-
-	option {
-		font-size: 16px;
-		text-align: center;
-	}
-
-	option:disabled {
-		color: #666;
-	}
 }
 
 .form-check {
@@ -164,10 +160,17 @@ h6 {
 
 .jc-heading {
 	font-family: Braga,serif;
-	font-size: 4em;
 	font-weight: 400;
 	line-height: 1.15;
 	text-align: center;
+
+	@include media-breakpoint-down(sm) {
+		font-size: 3em;
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: 4em;
+	}
 }
 
 .jc-copy {
@@ -186,58 +189,91 @@ h6 {
 	display: block;
 }
 
+.jc-iframe-container {
+	position: relative;
+	padding-top: 100%;
+
+	.jc-iframe {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
 
 //
 // sections
 
 .jc-hero {
-	margin-bottom: 5em;
+	position: relative;
 
-	.jc-eyebrow {
-		margin-bottom: 5em;
-
-		.jc-line {
-			line-height: 2.5;
-			text-align: center;
-			text-transform: uppercase;
-
-			&:nth-child(1) {
-				letter-spacing: 1em;
-			}
-
-			&:nth-child(2) {
-				letter-spacing: 1.3em;
-			}
-		}
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 3em;
 	}
-	.jc-svg {
-		margin-bottom: 2em;
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 5em;
+	}
+
+	.jc-link {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 	}
 }
 
 .jc-welcome {
-	margin-bottom: 4em;
 
-	.jc-heading {
-		margin-bottom: 0.5em;
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 3em;
 	}
 
-	.jc-video {
+	@include media-breakpoint-up(md) {
+		margin-bottom: 5em;
+	}
+
+	.jc-heading {
+
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 1em;
+		}
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0.5em;
+		}
+	}
+
+	.jc-iframe-container {
+		padding-top: 147%;
 		margin-bottom: 3em;
 		border: 0.625em solid black;
 		outline: 0.1em solid #666;
 	}
 
 	.jc-copy {
-		margin-bottom: 2em;
+
+		@include media-breakpoint-down(sm) {
+			font-size: 1.25em;
+		}
 	}
 }
 
 .jc-coming-soon {
+	position: relative;
 	margin-bottom: 2em;
-	//background-image: url('../img/coming-soon.jpg');
-	background-position: 50% 0;
-	background-size: cover;
+
+	.jc-iframe-container {
+		padding-top: 75%;
+	}
+
+	.jc-link {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
 
 	.jc-eyebrow {
 		margin-top: 2.25em;
@@ -279,9 +315,12 @@ h6 {
 	}
 }
 
-.jc-register {
-	margin-top: 2em;
+.jc-map {
 	margin-bottom: 2em;
+}
+
+.jc-register {
+	margin-bottom: 3em;
 
 	.jc-form-col {
 
@@ -289,18 +328,20 @@ h6 {
 		.jc-heading {
 			font-family: montserrat,sans-serif;
 			text-align: center;
-			margin-bottom: 0.25em;
-			font-size: 2em;
 			letter-spacing: 10px;
 			font-weight: 300;
 
-			// @include media-breakpoint-down(sm) {
-			// 	font-size: 3em;
-			// }
+			@include media-breakpoint-down(sm) {
+				font-size: 1em;
+			}
 
 			@include media-breakpoint-up(md) {
-
+				font-size: 2em;
 			}
+		}
+
+		.jc-subheading {
+			margin-bottom: 1em;
 		}
 
 		.jc-heading {
@@ -386,13 +427,14 @@ h6 {
 				font-weight: 400;
 				line-height: 1.325;
 				text-align: center;
-				margin-right: 1em;
 
 				@include media-breakpoint-down(sm) {
+					margin-right: 0.5em;
 					font-size: 2em;
 				}
 
 				@include media-breakpoint-up(md) {
+					margin-right: 1em;
 					font-size: 3em;
 				}
 			}
@@ -427,6 +469,8 @@ h6 {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			margin-bottom: 1em;
+			padding-left: 0;
 
 			.form-check-input {
 				display: none;
@@ -439,7 +483,7 @@ h6 {
 				transition: color 200ms ease;
 
 				@include media-breakpoint-down(sm) {
-					font-size: 0.9em;
+					font-size: 2em;
 				}
 
 				@include media-breakpoint-up(md) {
@@ -454,13 +498,14 @@ h6 {
 			.form-check-label {
 				line-height: 1.4;
 				font-family: Braga,serif;
-				margin: 0 1em 0 0;
 
 				@include media-breakpoint-down(sm) {
-					font-size: 0.9em;
+					margin: 0 0.5em 0 0;
+					font-size: 2em;
 				}
 
 				@include media-breakpoint-up(md) {
+					margin: 0 1em 0 0;
 					font-size: 2.5em;
 				}
 			}
@@ -474,8 +519,19 @@ h6 {
 	}
 }
 
+.jc-artist-conception {
+	margin-bottom: 3em;
+}
+
 .jc-visionaries {
-	margin-top: 4em;
+
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 1em;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 3em;
+	}
 
 	.jc-heading {
 		margin-bottom: 1em;
@@ -503,22 +559,33 @@ h6 {
 		}
 	}
 
-	.jc-visionary-col {
-
-		.jc-btn {
-			font-family: Montserrat,serif;
-			font-size: 0.875em;
-		}
-	}
-
 	.jc-copy {
 		font-size: 1em;
+	}
+
+	.jc-btn {
+		font-family: Montserrat,serif;
+
+		@include media-breakpoint-down(sm) {
+			font-size: 1.25em;
+			margin-bottom: 2em;
+		}
+
+		@include media-breakpoint-up(md) {
+			font-size: 0.875em;
+		}
 	}
 }
 
 .jc-bottom-links {
-	margin-top: 6em;
-	margin-bottom: 3em;
+
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 6em;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 4em;
+	}
 
 	.jc-btn {
 
@@ -531,9 +598,18 @@ h6 {
 	}
 }
 
+.jc-gallery,
+.jc-terms-privacy {
+	margin-bottom: 4em;
+}
+
 footer {
-	margin-top: 7em;
-	margin-bottom: 2em;
+	margin-top: 2em;
+	margin-bottom: 4em;
+	
+	@include media-breakpoint-down(sm) {
+		text-align: center;
+	}
 	
 	.jc-footer-container {
 		position: relative;
@@ -548,12 +624,44 @@ footer {
 			background-color: #707070;
 		}
 	}
+
 	.jc-logo-col {
-		text-align: right;
+		.jc-svg {
+			@include media-breakpoint-down(sm) {
+				margin-top: 2em;
+				margin-bottom: 3em;
+			}
+		}
+	}
+
+	.jc-copy-col {
+
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 3em;
+		}
+
+		@include media-breakpoint-up(md) {
+			margin-top: -0.5em;
+			font-size: 0.75em;
+		}
+	}
+
+	.jc-icons-col {
+
+		@include media-breakpoint-up(md) {
+			text-align: right;
+		}
 
 		.jc-svg {
-			width: auto;
-			height: 1.125em;
+			@include media-breakpoint-down(sm) {
+				width: auto;
+				height: 1.125em;
+			}
+
+			@include media-breakpoint-up(md) {
+				width: auto;
+				height: 1.125em;
+			}
 		}
 
 		a:nth-child(1) .jc-svg {  }
