@@ -1,34 +1,12 @@
 //----------------------------------------------------------------------------//
-// Mobile Detect                                                              //
-//----------------------------------------------------------------------------//
-$(function()
-{
-	var isMobile = function () {
-
-		if ($('.jc-mobile-detect').is(':visible'))
-			return true;
-
-	}
-
-	if(isMobile()) {
-		console.log('we are mobile');
-	}
-	else {
-		console.log('we are desktop');
-	}
-});
-
-//----------------------------------------------------------------------------//
 // Adding videos based on mobile detection                                    //
 //----------------------------------------------------------------------------//
 $(function()
 {
 
 	var isMobile = function () {
-
 		if ($('.jc-mobile-detect').is(':visible'))
 			return true;
-
 	}
 
 	if(isMobile()) {
