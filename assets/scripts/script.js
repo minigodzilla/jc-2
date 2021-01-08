@@ -1,8 +1,44 @@
 //----------------------------------------------------------------------------//
-// Video Container                                                            //
+// Mobile Detect                                                              //
 //----------------------------------------------------------------------------//
 $(function()
 {
+	var isMobile = function () {
+
+		if ($('.jc-mobile-detect').is(':visible'))
+			return true;
+
+	}
+
+	if(isMobile()) {
+		console.log('we are mobile');
+	}
+	else {
+		console.log('we are desktop');
+	}
+});
+
+//----------------------------------------------------------------------------//
+// Adding videos based on mobile detection                                    //
+//----------------------------------------------------------------------------//
+$(function()
+{
+
+	var isMobile = function () {
+
+		if ($('.jc-mobile-detect').is(':visible'))
+			return true;
+
+	}
+
+	if(isMobile()) {
+		$('.jc-hero .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/498397802?background=1" frameborder="0" allow="autoplay"></iframe>');
+		$('.jc-coming-soon .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/498397595?background=1" frameborder="0" allow="autoplay"></iframe>');
+	}
+	else {
+		$('.jc-hero .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/482804389?background=1" frameborder="0" allow="autoplay"></iframe>');
+		$('.jc-coming-soon .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/490151498?background=1" frameborder="0" allow="autoplay"></iframe>');
+	}
 
 	$('.ec-video-container .ec-video-poster').on('click', function() {
 

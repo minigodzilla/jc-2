@@ -216,7 +216,14 @@ h6 {
 	}
 
 	.jc-iframe-container {
-		padding-top: 56.25%;
+
+		@include media-breakpoint-down(sm) {
+			padding-top: 150%;
+		}
+
+		@include media-breakpoint-up(md) {
+			padding-top: 56.25%;
+		}
 	}
 
 	.jc-link {
@@ -269,7 +276,14 @@ h6 {
 	margin-bottom: 2em;
 
 	.jc-iframe-container {
-		padding-top: 75%;
+
+		@include media-breakpoint-down(sm) {
+			padding-top: 150%;
+		}
+
+		@include media-breakpoint-up(md) {
+			padding-top: 75%;
+		}
 	}
 
 	.jc-link {
