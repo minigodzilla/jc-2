@@ -217,15 +217,12 @@ h6 {
 	}
 
 	.jc-iframe-container {
-
-		@include media-breakpoint-down(sm) {
-			padding-top: 150%;
-		}
+		padding-top: 0;
+		height: 100vh;
 
 		@include media-breakpoint-up(md) {
-			padding-top: 0;
-			height: 100vh;
 			min-height: 640px;
+
 		}
 	}
 
