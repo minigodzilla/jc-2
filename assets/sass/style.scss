@@ -544,11 +544,11 @@ h6 {
 .jc-visionaries {
 
 	@include media-breakpoint-down(sm) {
-		margin-bottom: 1em;
+		margin-bottom: 6em;
 	}
 
 	@include media-breakpoint-up(md) {
-		margin-bottom: 3em;
+		margin-bottom: 8em;
 	}
 
 	.jc-heading {
