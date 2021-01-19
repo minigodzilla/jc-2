@@ -92,7 +92,7 @@ $(function()
 
 	$('.jc-form-check-span').on('click', function() {
 
-		$('input#Custom1').trigger('click');
+		$('input#Custom2').trigger('click');
 
 	});
 
