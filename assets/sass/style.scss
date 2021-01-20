@@ -283,12 +283,14 @@ h6 {
 
 .jc-coming-soon {
 	position: relative;
-	margin-bottom: 2em;
+	margin-bottom: 4em;
 
 	.jc-iframe-container {
 
 		@include media-breakpoint-down(sm) {
-			padding-top: 150%;
+			padding-top: 162.5%;
+			margin-left: -2em;
+			margin-right: -2em;
 		}
 
 		@include media-breakpoint-up(md) {
@@ -345,7 +347,7 @@ h6 {
 }
 
 .jc-map {
-	margin-bottom: 2em;
+	margin-bottom: 4em;
 }
 
 .jc-register {
