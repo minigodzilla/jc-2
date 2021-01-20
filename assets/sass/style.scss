@@ -465,6 +465,12 @@ h6 {
 				@include media-breakpoint-up(md) {
 					margin-left: 1em;
 				}
+
+				&.type-2 {
+					font-family: Braga,serif;
+					font-size: 3em;
+					margin-right: 0.5em;
+				}
 			}
 
 			.jc-form-toggle-option {
@@ -487,8 +493,8 @@ h6 {
 				}
 			}
 
-			.jc-form-toggle-input[value='true'] ~ .jc-yes,
-			.jc-form-toggle-input[value='false'] ~ .jc-no {
+			.jc-form-toggle-input[value='yes'] ~ .jc-yes,
+			.jc-form-toggle-input[value='no'] ~ .jc-no {
 				color: #fff;
 			}
 		}

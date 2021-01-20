@@ -84,17 +84,20 @@ $(function()
 	$('.jc-form-toggle-option').on('click', function() {
 
 		var value = $(this).attr('data-value');
+		var parent = $(this).parent('.jc-form-toggle');
 
-		$('.jc-form-toggle-input').attr('value', value);
+		console.log(value);
+
+		parent.children('input').attr('value', value);
 
 	});
 
 
 	$('.jc-form-check-span').on('click', function() {
 
-		var $this = $(this).parent('.form-check');
+		var parent = $(this).parent('.form-check');
 
-		$this.children('input').trigger('click');
+		parent.children('input').trigger('click');
 
 	});
 
