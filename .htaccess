@@ -1,0 +1,20 @@
+# Helicon ISAPI_Rewrite configuration file
+# Version 3.1.0.89
+
+RewriteEngine On
+
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} !(.*)cloud(.*)$ [NC]
+RewriteRule ^(.*)/?$ https://www.liveatmontage.ca/$1 [L,R=301,QSA]
+
+#remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+#force www
+RewriteCond %{HTTP_HOST} !(.*)cloud(.*)$ [NC]
+RewriteCond %{HTTP_HOST} !www\.liveatmontage.ca$ [NC]
+RewriteRule ^(.*)$ https://www.liveatmontage.ca/$1 [L,R=301]
+
+
