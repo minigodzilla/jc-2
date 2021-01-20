@@ -6,24 +6,81 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Joshua Creek Montage</title>
+	<link rel="stylesheet" href="assets/css/style.css?1" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9R9MQE6ES"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-Y9R9MQE6ES');
+	</script>
+	<!-- Global site tag (gtag.js) - Google Ads: 440098687 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-440098687"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'AW-440098687');
+	</script>
+	<!-- Event snippet for Registration conversion page -->
+	<script>
+		function gtag_report_conversion(url) {
+			var callback = function () {
+			if (typeof(url) != 'undefined') {
+				window.location = url;
+				}
+			};
+			gtag('event', 'conversion', {
+				'send_to': 'AW-440098687/SYk2CIWD0vEBEP--7dEB',
+				'event_callback': callback
+			});
+			return false;
+		}
+	</script>
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '1124710667941700');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1124710667941700&ev=PageView&noscript=1"
+	/></noscript>
+	
+	<meta id="jaiAccountID" content="1"/>
+	<meta id="jaiClientID" content="1"/>
+	<meta id="jaiWebsiteID" content="1"/>
+	<meta id="jaiGroupID" content="1"/>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" ></script>
+	<script type="text/javascript" src="https://crm.joeyai.email/tracking/track.js"></script>
+
 </head>
 
 <body>
 
 	<main>
-
-		<section class="jc-register" id="register">
+<section class="jc-register" id="register">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-11 mx-auto jc-form-col">
 						<h2 class="jc-subheading">ARRIVING EARLY 2021</h2>
 						<h1 class="jc-heading">REGISTER</h1>
-						<form action="http://crm.joeyai.email/do/register.php" method="post">
+						<form id="jc-register-form" action="register.php" method="post">
 							<div class="jc-form-container">
-								<input type="hidden" id="cid" name="cid" value="22651" />
+						<input type="hidden" id="cid" name="cid" value="1" />
 								<input type="hidden" id="fid" name="fid" value="1" />
-								<input type="hidden" id="Origin" name="Origin" value="Microsite Registration" />
 								<input type="hidden" id="apikey" name="apikey" value="1234" />
+								<input type="hidden" id="Origin" name="Origin" value="Microsite Registration" />
 								<div class="row jc-form-fields">
 									<div class="col-12">
 										<div class="form-group">
@@ -51,9 +108,8 @@
 									</div>
 									<div class="col-12">
 										<div class="form-group p-relative">
-											<!-- <input type="text" class="form-control" placeholder="How did you hear about us?"> -->
 											<div class="jc-select-choice">How did you hear about us?</div>
-											<select class="jc-select" id="RegistrationSource" name="RegistrationSource">
+											<select class="jc-select" id="Custom2" name="RegistrationSource">
 												<option value="" disabled selected>How did you hear about us?</option>
 												<option>Site signage</option>
 												<option>Mississauga News</option>
@@ -64,21 +120,25 @@
 												<option>Instagram Ad</option>
 												<option>Facebook Ad</option>
 												<option>Referral</option>
+												<option>I am a Realtor</option>
 											</select>
 											<small id="v-error-Custom2" class="invalid-feedback form-text text-danger">Please tell us how you heard about us.</small>
 										</div>
 									</div>
 									<div class="col-12">
-										<div class="jc-form-toggle">
-											<input class="jc-form-toggle-input" type="checkbox" value="yes" id="isBroker" name="IsBroker">
-											<div class="jc-form-toggle-label">Are you a Realtor?</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="Custom1" name="Custom1">
+											<label class="jc-form-toggle-label" for="Custom1">I agree like to receive communications from Hallett Homes, Primont, and Valery Homes containing news, updates and promotions about their communities. You can withdraw your consent at any time. Please refer to our <a href="/privacy.html" target="_blank">Privacy Policy</a> for more information.</label>
+											<span class="jc-form-check-span jc-yes">Yes</span>
+											<small id="v-error-Custom1" class="invalid-feedback form-text text-danger">Please check Yes.</small>
 										</div>
 									</div>
 									<div class="col-12">
 										<div class="form-check">
-											<label class="form-check-label" for="Custom1">Do you agree to the <a href="toc.html">terms and conditions</a>?</label>
-											<input class="form-check-input" type="checkbox" value="" id="Custom1" name="Custom1">
-											<span class="jc-form-check-span">Yes</span>
+											<input class="form-check-input" type="checkbox" value="" id="Custom2" name="Custom2">
+											<label class="form-check-label" for="Custom2">Do you agree to the <a href="terms.html">terms and conditions</a>?</label>
+											<span class="jc-form-check-span jc-yes">Yes</span>
+											<small id="v-error-Custom2" class="invalid-feedback form-text text-danger">Please check Yes.</small>
 										</div>
 									</div>
 									<div class="col-12">
@@ -100,7 +160,211 @@
 			</div>
 		</section>
 
+
+
 	</main>
+
+
+	<script>
+	
+	
+
+//----------------------------------------------------------------------------//
+// Register Form                                                              //
+//----------------------------------------------------------------------------//
+
+		$(function()
+		{
+
+			$('.jc-select').on('change',function() {
+
+				var value = $(this).val();
+
+				$('.jc-select-choice').html(value);
+			});
+
+			$('.jc-form-toggle-option').on('click', function() {
+
+				var value = $(this).attr('data-value');
+
+				$('.jc-form-toggle-input').attr('value', value);
+
+			});
+
+
+			$('.jc-form-check-span').on('click', function() {
+
+				var $this = $(this).parent('.form-check');
+
+				$this.children('input').trigger('click');
+
+			});
+
+
+			////////////////////////////////////////////////////////////////////////////////
+
+			var $form              = $('#jc-register-form');
+			var $inputs            = $form.find ('.form-control');
+			var $checkboxes        = $form.find ('.form-check-input');
+			var $email             = $form.find ('.form-control[name=Email]');
+			var $button            = $form.find ('.jc-btn-submit');
+			var errorState         = false;
+
+			////////////////////////////////////////////////////////////////////////////////
+
+			function isEmail(email) {
+
+				var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+				if(!regex.test(email))
+				{
+					return false;
+				}
+
+				else
+				{
+					return true;
+				}
+			}
+
+			$inputs.blur (function()
+			{
+				if (!$(this).val())
+				{
+					$(this).removeClass ('is-valid').addClass ('is-invalid');
+				}
+
+				else
+				{
+					$(this).removeClass ('is-invalid').addClass ('is-valid');
+				}
+			});
+
+			$email.blur (function()
+			{
+				if (!isEmail ($(this).val()))
+				{
+					$(this).removeClass ('is-valid').addClass ('is-invalid');
+				}
+
+				else
+				{
+					$(this).removeClass ('is-invalid').addClass ('is-valid');
+				}
+
+			});
+
+			$form.submit (function(e)
+			{
+				// prevent default submit behaviour
+				e.preventDefault();
+
+				// reset error state
+				errorState = false;
+
+				// check for empty fields
+				$inputs.each (function()
+				{
+					if (!$(this).val())
+					{
+						$(this).removeClass ('is-valid').addClass ('is-invalid');
+						errorState = true;
+					}
+
+					else
+					{
+						$(this).removeClass ('is-invalid').addClass ('is-valid');
+					}
+				});
+
+				// check whether email is valid
+				if (!isEmail ($email.val()))
+				{
+					$email.removeClass ('is-valid').addClass ('is-invalid');
+					errorState = true;
+				}
+
+				else
+				{
+					$email.removeClass ('is-invalid').addClass ('is-valid');
+				}
+
+				// check for checked checkboxes
+				$checkboxes.each (function()
+				{
+					if ($(this).prop("checked") == false)
+					{
+						$(this).removeClass ('is-valid').addClass ('is-invalid');
+						errorState = true;
+					}
+
+					else
+					{
+						$(this).removeClass ('is-invalid').addClass ('is-valid');
+					}
+				});
+
+				// if form has errors
+				if (errorState)
+					return false;
+
+				// now we do ajax
+				// get form
+				var form = $('#jc-register-form')[0];
+
+				// create an FormData object 
+				var data = new FormData(form);
+
+				// prevent duplicate submissions
+				$form.find('.jc-btn-submit').prop('disabled', true);
+
+				// do a barrel roll
+				$.ajax({
+					type: "POST",
+					enctype: 'multipart/form-data',
+					url: "/register2.php",
+					data: data,
+					processData: false,
+					contentType: false,
+					cache: false,
+					timeout: 800000,
+					success: function (datatxt) {
+					console.log(data);
+					data = JSON.parse(datatxt);
+			if (data.id)
+						{
+							try
+							{
+								jtrack_match(data.id);
+							}
+							catch (ex)
+							{
+								console.log("Unable to match user");
+							}
+						}
+						
+						$form.addClass('jc-success');
+
+					},
+					error: function (e) {
+
+						console.log("ERROR : ", e);
+
+						$form.addClass('jc-error');
+
+					}
+				});
+
+				// report conversion
+				gtag_report_conversion();
+
+			});
+
+		});
+
+
+
+	</script>
 
 </body>
 

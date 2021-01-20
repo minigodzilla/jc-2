@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Joshua Creek Montage</title>
-	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/style.css?99" />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9R9MQE6ES"></script>
 	<script>
@@ -55,6 +55,12 @@
 	<noscript><img height="1" width="1" style="display:none"
 	src="https://www.facebook.com/tr?id=1124710667941700&ev=PageView&noscript=1"
 	/></noscript>
+
+	<meta id="jaiAccountID" content="1"/>
+	<meta id="jaiClientID" content="1"/>
+	<meta id="jaiWebsiteID" content="1"/>
+	<meta id="jaiGroupID" content="1"/>
+
 </head>
 
 <body>
@@ -180,7 +186,9 @@
 						<h1 class="jc-heading">REGISTER</h1>
 						<form id="jc-register-form" action="register.php" method="post">
 							<div class="jc-form-container">
-								<input type="hidden" id="cid" name="cid" value="22864" />
+								<input type="hidden" id="cid" name="cid" value="1" />
+								<input type="hidden" id="fid" name="fid" value="1" />
+								<input type="hidden" id="apikey" name="apikey" value="1234" />
 								<input type="hidden" id="Origin" name="Origin" value="Microsite Registration" />
 								<div class="row jc-form-fields">
 									<div class="col-12">
@@ -210,7 +218,7 @@
 									<div class="col-12">
 										<div class="form-group p-relative">
 											<div class="jc-select-choice">How did you hear about us?</div>
-											<select class="jc-select" id="Custom1" name="Custom1">
+											<select class="jc-select" id="RegistrationSource" name="RegistrationSource">
 												<option value="" disabled selected>How did you hear about us?</option>
 												<option>Site signage</option>
 												<option>Mississauga News</option>
@@ -221,9 +229,8 @@
 												<option>Instagram Ad</option>
 												<option>Facebook Ad</option>
 												<option>Referral</option>
-												<option>I am a Realtor</option>
 											</select>
-											<small id="v-error-Custom1" class="invalid-feedback form-text text-danger">Please tell us how you heard about us.</small>
+											<small id="v-error-RegistrationSource" class="invalid-feedback form-text text-danger">Please tell us how you heard about us.</small>
 										</div>
 									</div>
 									<div class="col-12">
@@ -376,7 +383,9 @@
 
 	<span class="jc-mobile-detect d-block d-md-none"></span>
 
-	<script src="./assets/js/script.js"></script>
+	<script src="./assets/js/script.js?99"></script>
+	<script type="text/javascript" src="https://crm.joeyai.email/tracking/track.js"></script>
+
 </body>
 
 </html>

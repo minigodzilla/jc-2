@@ -229,8 +229,19 @@ $(function()
 			contentType: false,
 			cache: false,
 			timeout: 800000,
-			success: function (data) {
-
+			success: function (datatxt) {
+				responseData = JSON.parse(datatxt);
+				if (responseData.id)
+				{
+					try
+					{
+						jtrack_match(responseData.id);
+					}
+					catch (ex)
+					{
+						console.log("Unable to match user");
+					}
+				}
 				$form.addClass('jc-success');
 
 			},
