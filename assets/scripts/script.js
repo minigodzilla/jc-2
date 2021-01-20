@@ -92,7 +92,9 @@ $(function()
 
 	$('.jc-form-check-span').on('click', function() {
 
-		$('input#Custom2').trigger('click');
+		var $this = $(this).parent('.form-check');
+
+		$this.children('input').trigger('click');
 
 	});
 
@@ -101,6 +103,7 @@ $(function()
 
 	var $form              = $('#jc-register-form');
 	var $inputs            = $form.find ('.form-control');
+	var $checkboxes        = $form.find ('.form-check-input');
 	var $email             = $form.find ('.form-control[name=Email]');
 	var $button            = $form.find ('.jc-btn-submit');
 	var errorState         = false;
@@ -184,6 +187,21 @@ $(function()
 			$email.removeClass ('is-invalid').addClass ('is-valid');
 		}
 
+		// check for checked checkboxes
+		$checkboxes.each (function()
+		{
+			if ($(this).prop("checked") == false)
+			{
+				$(this).removeClass ('is-valid').addClass ('is-invalid');
+				errorState = true;
+			}
+
+			else
+			{
+				$(this).removeClass ('is-invalid').addClass ('is-valid');
+			}
+		});
+
 		// if form has errors
 		if (errorState)
 			return false;
@@ -221,6 +239,9 @@ $(function()
 
 			}
 		});
+
+		// report conversion
+		gtag_report_conversion();
 
 	});
 

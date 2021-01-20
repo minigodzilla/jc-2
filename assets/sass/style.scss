@@ -44,6 +44,10 @@ a:visited {
 	color: inherit;
 }
 
+main a {
+	text-decoration: underline;
+}
+
 h1,
 h2,
 h3,
@@ -497,12 +501,20 @@ h6 {
 				display: none;
 			}
 
+			.jc-form-toggle-label {
+				margin-bottom: 0;
+
+				a {
+					white-space: nowrap;
+				}
+			}
+
 			.jc-form-check-span {
 				line-height: 1.4;
 				font-family: Braga,serif;
 				color: #666;
 				transition: color 200ms ease;
-				margin-right: 0.25em;
+				margin-left: 0.25em;
 
 				@include media-breakpoint-down(sm) {
 					font-size: 3em;
@@ -529,6 +541,7 @@ h6 {
 				margin-left: 0.5em;
 				line-height: 1.2;
 				font-family: Braga,serif;
+				color: #fff !important;
 
 				@include media-breakpoint-down(sm) {
 					font-size: 2em;

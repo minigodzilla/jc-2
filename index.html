@@ -7,6 +7,54 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Joshua Creek Montage</title>
 	<link rel="stylesheet" href="assets/css/style.css" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9R9MQE6ES"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-Y9R9MQE6ES');
+	</script>
+	<!-- Global site tag (gtag.js) - Google Ads: 440098687 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-440098687"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'AW-440098687');
+	</script>
+	<!-- Event snippet for Registration conversion page -->
+	<script>
+		function gtag_report_conversion(url) {
+			var callback = function () {
+			if (typeof(url) != 'undefined') {
+				window.location = url;
+				}
+			};
+			gtag('event', 'conversion', {
+				'send_to': 'AW-440098687/SYk2CIWD0vEBEP--7dEB',
+				'event_callback': callback
+			});
+			return false;
+		}
+	</script>
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '1124710667941700');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1124710667941700&ev=PageView&noscript=1"
+	/></noscript>
 </head>
 
 <body>
@@ -179,19 +227,19 @@
 										</div>
 									</div>
 									<div class="col-12">
-										<div class="jc-form-toggle">
-											<input class="jc-form-toggle-input" type="hidden" value="true" id="Custom1" name="Custom1">
-											<div class="jc-form-toggle-option jc-no" data-value="false">No</div>
-											<div class="jc-form-toggle-option jc-yes" data-value="true">Yes</div>
-											<div class="jc-form-toggle-label">I agree like to receive communications from Hallett Homes, Primont, and Valery Homes containing news, updates and promotions about their communities. You can withdraw your consent at any time. Please refer to our <a href="/privacy.html" target="_blank">Privacy Policy</a> for more information.</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="Custom1" name="Custom1">
+											<label class="jc-form-toggle-label" for="Custom1">I agree like to receive communications from Hallett Homes, Primont, and Valery Homes containing news, updates and promotions about their communities. You can withdraw your consent at any time. Please refer to our <a href="/privacy.html" target="_blank">Privacy Policy</a> for more information.</label>
+											<span class="jc-form-check-span jc-yes">Yes</span>
+											<small id="v-error-Custom1" class="invalid-feedback form-text text-danger">Please check Yes.</small>
 										</div>
 									</div>
 									<div class="col-12">
 										<div class="form-check">
 											<input class="form-check-input" type="checkbox" value="" id="Custom2" name="Custom2">
-											<span class="jc-form-check-span jc-no">No</span>
-											<span class="jc-form-check-span jc-yes">Yes</span>
 											<label class="form-check-label" for="Custom2">Do you agree to the <a href="terms.html">terms and conditions</a>?</label>
+											<span class="jc-form-check-span jc-yes">Yes</span>
+											<small id="v-error-Custom2" class="invalid-feedback form-text text-danger">Please check Yes.</small>
 										</div>
 									</div>
 									<div class="col-12">
