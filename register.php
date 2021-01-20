@@ -21,7 +21,8 @@ foreach ($data as $key=>$val) {
                 }
 }
 
-$url = "http://wms.tbf.email/registration.php";
+$url = "http://crm.joeyai.email/do/register.php";
+
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_POST      ,1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, implode("&", $serialize));
@@ -29,14 +30,12 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION  ,1);
 curl_setopt($ch, CURLOPT_HEADER      ,0);  // DO NOT RETURN HTTP HEADERS
 curl_setopt($ch, CURLOPT_RETURNTRANSFER  ,1);  // RETURN THE CONTENTS OF THE CALL
  
-$ret = json_decode(curl_exec($ch));
-
+$ret = curl_exec($ch);
 $email  = new CEmail($_POST);
 $subject = "You’re on the list";
 $template = "edm";
 //$_POST["Email"] =  "lgrecu@joeyai.com";
-$email->sendRich($_POST["Email"], $subject, $template);
+//$email->sendRich($_POST["Email"], $subject, $template);
+die($ret);
 
 ?>
-
-<?php print_r($data) ?>
