@@ -430,8 +430,12 @@ h6 {
 			}
 
 			&::placeholder {
-				color: #d5d5d5;
+				color: #888;
 				transition: color ease 200ms;
+			}
+
+			&:focus::placeholder {
+				color: #333;
 			}
 
 			&.is-invalid,
