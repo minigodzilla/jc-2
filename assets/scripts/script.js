@@ -10,12 +10,12 @@ $(function()
 	}
 
 	if(isMobile()) {
-		$('.jc-hero .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/498397802?background=1" frameborder="0" allow="autoplay"></iframe>');
-		$('.jc-coming-soon .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/498397595?background=1" frameborder="0" allow="autoplay"></iframe>');
+		$('.jc-hero .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/498397802?controls=0&autoplay=1&muted=1&loop=0" allow="autoplay; fullscreen" muted autoplay></iframe>');
+		$('.jc-coming-soon .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/498397595?controls=0&autoplay=1&muted=1&loop=0" allow="autoplay; fullscreen" muted autoplay></iframe>');
 	}
 	else {
-		$('.jc-hero .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/482804389?background=1" frameborder="0" allow="autoplay"></iframe>');
-		$('.jc-coming-soon .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/490151498?background=1" frameborder="0" allow="autoplay"></iframe>');
+		$('.jc-hero .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/482804389?controls=0&autoplay=1&muted=1&loop=0" allow="autoplay; fullscreen" muted autoplay></iframe>');
+		$('.jc-coming-soon .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/490151498?controls=0&autoplay=1&muted=1&loop=0" allow="autoplay; fullscreen" muted autoplay></iframe>');
 	}
 
 	$('.ec-video-container .ec-video-poster').on('click', function() {
@@ -73,6 +73,19 @@ $(function()
 
 $(function()
 {
+
+	function gtag_report_conversion(url) {
+		var callback = function () {
+			if (typeof(url) != 'undefined') {
+				window.location = url;
+			}
+		};
+		gtag('event', 'conversion', {
+			'send_to': 'AW-440098687/SYk2CIWD0vEBEP--7dEB',
+			'event_callback': callback
+		});
+		return false;
+	}
 
 	$('.jc-select').on('change',function() {
 
@@ -251,6 +264,7 @@ $(function()
 				$form.addClass('jc-success');
 
 				// report conversion
+
 				gtag_report_conversion();
 
 			},
