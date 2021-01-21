@@ -299,6 +299,9 @@ $(function()
 		// prevent default submit behaviour
 		e.preventDefault();
 
+		// prevent duplicate submissions
+		$form.find('.oj-btn-submit').prop('disabled', true);
+
 		// reset error state
 		errorState = false;
 
@@ -326,8 +329,14 @@ $(function()
 		}
 
 		// if form has errors
-		if (errorState)
+		if (errorState) {
+
+			// unlock disable button
+			$form.find('.oj-btn-submit').prop('disabled', false);
+
 			return false;
+
+		}
 
 		// now we do ajax
 		// get form
@@ -335,9 +344,6 @@ $(function()
 
 		// create an FormData object 
 		var data = new FormData(form);
-
-		// prevent duplicate submissions
-		$form.find('.oj-btn-submit').prop('disabled', true);
 
 		// do a barrel roll
 		$.ajax({
