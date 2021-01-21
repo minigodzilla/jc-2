@@ -244,6 +244,9 @@ $(function()
 				}
 				$form.addClass('jc-success');
 
+				// report conversion
+				gtag_report_conversion();
+
 			},
 			error: function (e) {
 
@@ -253,9 +256,6 @@ $(function()
 
 			}
 		});
-
-		// report conversion
-		gtag_report_conversion();
 
 	});
 
