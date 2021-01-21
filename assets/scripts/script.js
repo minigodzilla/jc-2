@@ -157,6 +157,9 @@ $(function()
 
 	$form.submit (function(e)
 	{
+		// prevent duplicate submissions
+		$form.find('.jc-btn-submit').prop('disabled', true);
+
 		// prevent default submit behaviour
 		e.preventDefault();
 
@@ -215,9 +218,6 @@ $(function()
 
 		// create an FormData object 
 		var data = new FormData(form);
-
-		// prevent duplicate submissions
-		$form.find('.jc-btn-submit').prop('disabled', true);
 
 		// do a barrel roll
 		$.ajax({
