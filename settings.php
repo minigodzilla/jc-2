@@ -25,8 +25,8 @@
 	define("DB_DB", "");
 	
 	/* email */
-	define("EMAIL_FROM", "EMBLEM Developments");
-	define("EMAIL_FROM_ADDRESS", "info@emblemdevcorp.com");
+	define("EMAIL_FROM", "Joshua Creek Montage");
+	define("EMAIL_FROM_ADDRESS", "info@liveatmontage.ca");
 	define("EMAIL_ADMIN", "lgrecu@thebrandfactory.com");
 	define("SENDER_FROM", "email@tbf.email"); # don't change this
 

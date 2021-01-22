@@ -32,10 +32,10 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER  ,1);  // RETURN THE CONTENTS OF THE CAL
  
 $ret = curl_exec($ch);
 $email  = new CEmail($_POST);
-$subject = "You’re on the list";
+$subject = "Welcome to Joshua Creek Montage";
 $template = "edm";
 //$_POST["Email"] =  "lgrecu@joeyai.com";
-//$email->sendRich($_POST["Email"], $subject, $template);
+$email->sendRich($_POST["Email"], $subject, $template);
 die($ret);
 
 ?>

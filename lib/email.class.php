@@ -51,10 +51,10 @@
 		/** comment here */
 		function sendRich($to, $subject, $template) {
 			$tpl = file_get_contents("assets/email/" . $template . ".html");
-			foreach ($this->mParams as $key=>$val) {
-				$tpl->assign($key, nl2br($val));
-				$tpl = str_replace("{" . $key . "}", nl2br($val), $tpl);
-			}
+//			foreach ($this->mParams as $key=>$val) {
+//				$tpl->assign($key, nl2br($val));
+//				$tpl = str_replace("{" . $key . "}", nl2br($val), $tpl);
+//			}
 			$txt = $tpl;
 
 			if (!$this->mFrom) $this->mFrom = EMAIL_FROM;
