@@ -10,24 +10,13 @@ $(function()
 	}
 
 	if(isMobile()) {
-		$('.jc-hero .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/498397802?controls=0&autoplay=1&muted=1&loop=0" allow="autoplay; fullscreen" muted autoplay></iframe>');
-		$('.jc-coming-soon .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/498397595?controls=0&autoplay=1&muted=1&loop=0" allow="autoplay; fullscreen" muted autoplay></iframe>');
+		$('.jc-hero .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/498397802?controls=0&autoplay=1&muted=1&loop=0" frameborder="0" allow="autoplay; fullscreen" muted autoplay></iframe>');
+		$('.jc-coming-soon .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/498397595?controls=0&autoplay=1&muted=1&loop=0" frameborder="0" allow="autoplay; fullscreen" muted autoplay></iframe>');
 	}
 	else {
-		$('.jc-hero .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/482804389?controls=0&autoplay=1&muted=1&loop=0" allow="autoplay; fullscreen" muted autoplay></iframe>');
-		$('.jc-coming-soon .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/490151498?controls=0&autoplay=1&muted=1&loop=0" allow="autoplay; fullscreen" muted autoplay></iframe>');
+		$('.jc-hero .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/482804389?controls=0&autoplay=1&muted=1&loop=0" frameborder="0" allow="autoplay; fullscreen" muted autoplay></iframe>');
+		$('.jc-coming-soon .jc-iframe-container').prepend('<iframe class="jc-iframe" src="https://player.vimeo.com/video/490151498?controls=0&autoplay=1&muted=1&loop=0" frameborder="0" allow="autoplay; fullscreen" muted autoplay></iframe>');
 	}
-
-	$('.ec-video-container .ec-video-poster').on('click', function() {
-
-		var container = $(this).parent();
-		var frame = container.find('.ec-video-frame');
-		var poster = container.find('.ec-video-poster');
-
-		container.addClass('ec-video-open');
-		frame.prepend('<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/468269570?autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>');
-
-	})
 
 });
 
@@ -37,33 +26,12 @@ $(function()
 $(function()
 {
 	
-	$('.ec-art-carousel .ec-carousel').owlCarousel({
-		dots: true,
-		loop: true,
-		nav: true,
-		items: 1
-	});
-
-	$('.ec-reasons .ec-carousel').owlCarousel({
-		margin: 40,
-		dots: false,
-		nav: true,
-		responsive:{
-			0:{
-				items: 1
-			},
-			768:{
-				items: 2,
-				slideBy: 2,
-				smartSpeed: 150
-			},
-			992:{
-				items: 5,
-				slideBy: 5,
-				smartSpeed: 150
-			}
-		}
-	});
+	// $('.jc-carousel').owlCarousel({
+	// 	dots: true,
+	// 	loop: true,
+	// 	nav: true,
+	// 	items: 1
+	// });
 
 });
 
