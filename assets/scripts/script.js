@@ -89,6 +89,7 @@ $(function()
 	var $inputs            = $form.find ('.form-control');
 	var $checkboxes        = $form.find ('.form-check-input');
 	var $email             = $form.find ('.form-control[name=Email]');
+	var $postal            = $form.find ('.form-control[name=PostalCode]');
 	var $button            = $form.find ('.jc-btn-submit');
 	var errorState         = false;
 
@@ -125,6 +126,23 @@ $(function()
 	$email.blur (function()
 	{
 		if (!isEmail ($(this).val()))
+		{
+			$(this).removeClass ('is-valid').addClass ('is-invalid');
+		}
+
+		else
+		{
+			$(this).removeClass ('is-invalid').addClass ('is-valid');
+		}
+
+	});
+
+	$postal.blur (function()
+	{
+		var ca = new RegExp(/([ABCEGHJKLMNPRSTVXY]\d)([ABCEGHJKLMNPRSTVWXYZ]\d){2}/i);
+		var postalCode = $(this).val();
+
+		if (!ca.test(postalCode.toString().replace(/\W+/g, '')))
 		{
 			$(this).removeClass ('is-valid').addClass ('is-invalid');
 		}
