@@ -238,7 +238,7 @@ $(function()
 				responseData = JSON.parse(datatxt);
 				if (responseData.id)
 				{
-					try
+					try 
 					{
 						jtrack_match(responseData.id);
 					}
@@ -252,8 +252,7 @@ $(function()
 
 				// report conversion
 
-				gtag_report_conversion();
-				fbq('track', “CompleteRegistration”);
+				fbq('track', "CompleteRegistration");
 				gtag('event', "Signup", {'event_category': "Conversions", 'event_label': "CompleteRegistration", 'value': 0});
 				gtag('event', 'conversion', {'send_to': 'AW-440098687/SYk2CIWD0vEBEP--7dEB'});
 
