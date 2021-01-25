@@ -384,19 +384,27 @@ h6 {
 
 			.jc-form-error-container,
 			.jc-form-success-container {
-				display: none;
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 10em;
+				text-align: center;
+				opacity: 0;
+				pointer-events: none;
 			}
 
 			&.jc-success,
 			&.jc-error {
 				.jc-form-container {
-					display: none;
+					opacity: 0;
+					pointer-events: none;
 				}
 			}
 
 			&.jc-success .jc-form-success-container,
 			&.jc-error .jc-form-error-container {
-				display: block;
+				opacity: 1;
+				pointer-events: auto;
 			}
 		}
 

@@ -248,10 +248,14 @@ $(function()
 					}
 				}
 				$form.addClass('jc-success');
+				window.location.replace('#form-success');
 
 				// report conversion
 
 				gtag_report_conversion();
+				fbq('track', “CompleteRegistration”);
+				gtag('event', "Signup", {'event_category': "Conversions", 'event_label': "CompleteRegistration", 'value': 0});
+				gtag('event', 'conversion', {'send_to': 'AW-440098687/SYk2CIWD0vEBEP--7dEB'});
 
 			},
 			error: function (e) {
@@ -259,6 +263,7 @@ $(function()
 				console.log("ERROR : ", e);
 
 				$form.addClass('jc-error');
+				window.location.replace('#form-error');
 
 			}
 		});
